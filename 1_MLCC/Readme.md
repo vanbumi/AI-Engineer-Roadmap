@@ -140,7 +140,7 @@ Data adalah kekuatan pendorong dari Machine Learning (ML). Data hadir dalam bent
 
 Sebaliknya, contoh yang tidak terlabel, mengandung fitur tetapi tidak ada label. Setelah Anda membuat model, model tersebut memprediksi label berdasarkan fitur yang ada.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 
 ### Karakteristik Dataset
@@ -171,20 +171,20 @@ Berikut ini menunjukkan proses pelatihan (training) sebuah model:
 
 1. Model menerima satu label contoh dan memberikan prediksi.
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Figure 1. An ML model making a prediction from a labeled example.
 
 
 2. Model membandingkan nilai yang diprediksinya dengan nilai aktual dan memperbaharui solusinya (prediksinya).
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 Figure 2. An ML model updating its predicted value.
 
 3. Model mengulangi proses ini untuk setiap contoh terlabel dalam dataset.
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 Figure 3. An ML model updating its predictions for each labeled example in the training dataset.
 
@@ -196,7 +196,7 @@ Selama pelatihan (training), praktisi ML dapat melakukan penyesuaian halus terha
 
 Kami mengevaluasi model yang telah dilatih untuk menentukan seberapa baik model tersebut belajar. Ketika kami mengevaluasi model, kami menggunakan dataset yang terlabel, tetapi kami hanya memberikan fitur dari dataset tersebut kepada model. Kami kemudian membandingkan prediksi model dengan nilai sebenarnya dari label.
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 Figure 4. Evaluating an ML model by comparing its predictions to the actual values.
 
@@ -224,13 +224,13 @@ Contoh, jika kita ingin memprediksi bahan bakar mobil dalam miles per gallon ber
 | 2.37                      | 24                        |
 
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 Figure 1. Berat mobil (dalam pounds) versus miles per gallon (dalam miles per gallon). Jika kendaraan lebih berat, maka miles per galon secara umum lebih rendah.
 
 Kita bisa membuat model kita sendiri dengan menggambar garis terbaik yang sesuai melalui titik-titik tersebut:
 
-![alt text](image-10.png)
+![alt text](images/image-10.png)
 
 Gambar 2. Garis terbaik yang digambar melalui data dari gambar sebelumnya.
 
@@ -267,7 +267,7 @@ Gambar 3. Representasi matematis dari model linier
 
 Dalam contoh kita, kita akan menghitung bobot dan bias dari garis yang kita gambar. Bias adalah 30 (di mana garis memotong sumbu y), dan bobot adalah -3,6 (kemiringan garis). Model akan didefinisikan sebagai `y = 30 + (-3.6)(x1)`, dan kita bisa menggunakannya untuk membuat prediksi. Misalnya, dengan menggunakan model ini, mobil seberat 4.000 pon diperkirakan memiliki efisiensi bahan bakar sebesar 15,6 mil per galon.
 
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 Gambar 4. Menggunakan model, mobil seberat 4.000 pon diperkirakan memiliki efisiensi bahan bakar sebesar 15,6 mil per galon.
 
@@ -290,21 +290,21 @@ Model ini akan ditulis sebagai berikut:
 
 seperti tampak pada gambar dibawah ini:
 
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 Gambar 5. Sebuah model dengan lima fitur untuk memprediksi penilaian mil per galon mobil.
 
 Dengan memplot beberapa fitur tambahan ini, kita dapat melihat bahwa mereka juga memiliki hubungan linier dengan label, mil per galon:
 
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
 Gambar 6. Displacement mobil dalam sentimeter kubik dan penilaian mil per galon. Seiring dengan meningkatnya ukuran mesin mobil, penilaian mil per galon umumnya akan menurun.
 
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
 Gambar 7. Akselerasi mobil dan penilaian mil per galon. Seiring dengan semakin lamanya waktu akselerasi mobil, penilaian mil per galon umumnya akan meningkat.
 
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 Gambar 8. Tenaga kuda mobil dan penilaian mil per galon. Seiring dengan meningkatnya tenaga kuda mobil, penilaian mil per galon umumnya akan menurun.
 
@@ -316,7 +316,7 @@ Kerugian adalah metrik numerik yang menggambarkan seberapa salah prediksi model.
 
 Pada gambar berikut, Anda dapat memvisualisasikan kerugian sebagai panah yang digambar dari titik data ke model. Panah tersebut menunjukkan seberapa jauh prediksi model dari nilai aktual.
 
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
 Gambar 9. Kerugian diukur dari nilai aktual ke nilai yang diprediksi.
 
@@ -335,7 +335,7 @@ Dua metode paling umum untuk menghilangkan tanda adalah sebagai berikut:
 
 Dalam regresi linier, terdapat empat jenis kerugian utama, yang dijelaskan dalam tabel berikut.
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 Perbedaan fungsional antara L1 loss dan L2 loss (atau antara MAE dan MSE) adalah pengkuadratan. Ketika perbedaan antara prediksi dan label besar, pengkuadratan membuat kerugian menjadi lebih besar. Ketika perbedaan kecil (kurang dari 1), pengkuadratan membuat kerugian menjadi lebih kecil.
 
@@ -352,7 +352,7 @@ Jika model memprediksi bahwa mobil seberat 2.370 pon mendapatkan 21,5 mil per ga
 
 > Catatan: Formula menggunakan 2.37 karena grafik diukur dalam ribuan pon.
 
-![alt text](image-20.png)
+![alt text](images/image-20.png)
 
 Dalam contoh ini, L2 loss untuk satu titik data tersebut adalah 6.25.
 
@@ -364,11 +364,11 @@ Outlier juga dapat merujuk pada seberapa jauh prediksi model dari nilai sebenarn
 
 Saat memilih fungsi kerugian yang terbaik, pertimbangkan bagaimana Anda ingin model memperlakukan outlier. Misalnya, MSE lebih mengarahkan model ke arah outlier, sementara MAE tidak. Kerugian L2 memberikan penalti yang jauh lebih tinggi untuk outlier dibandingkan dengan kerugian L1. Sebagai contoh, gambar berikut menunjukkan model yang dilatih menggunakan MAE dan model yang dilatih menggunakan MSE. Garis merah mewakili model yang sepenuhnya dilatih yang akan digunakan untuk membuat prediksi. Outlier lebih dekat ke model yang dilatih dengan MSE dibandingkan dengan model yang dilatih dengan MAE.
 
-![alt text](image-21.png)
+![alt text](images/image-21.png)
 
 Gambar 10. Sebuah model yang dilatih dengan MSE membawa model lebih dekat ke outlier.
 
-![alt text](image-22.png)
+![alt text](images/image-22.png)
 
 Gambar 11. Sebuah model yang dilatih dengan MAE berada lebih jauh dari outlier.
 
@@ -402,13 +402,13 @@ Kembali ke langkah satu dan ulangi proses ini sampai model tidak dapat mengurang
 
 Diagram di bawah ini menggambarkan langkah-langkah iteratif yang dilakukan oleh turunan gradien untuk menemukan bobot dan bias yang menghasilkan model dengan kerugian terendah.
 
-![alt text](image-23.png)
+![alt text](images/image-23.png)
 
 Gambar 12. Turunan gradien adalah proses iteratif yang menemukan bobot dan bias yang menghasilkan model dengan kerugian terendah.
 
 Menggunakan Weight dan bias untuk menghitung kerugian dan mengulangi proses iteratif ini akan menghasilkan model dengan kerugian terendah. mengulangi proses 6x percobaan, kita akan mendapatkan bobot, bias dan kerugian terendah. seperti tabel dibawah ini :
 
-![alt text](image-24.png)
+![alt text](images/image-24.png)
 
 Anda dapat melihat bahwa kerugian semakin rendah dengan setiap pembaruan bobot dan bias. Dalam contoh ini, kami berhenti setelah enam iterasi. Dalam praktiknya, sebuah model dilatih hingga konvergen. Ketika sebuah model konvergen, iterasi tambahan tidak mengurangi kerugian lebih lanjut karena turunan gradien telah menemukan bobot dan bias yang hampir meminimalkan kerugian.
 
@@ -420,7 +420,7 @@ Jika model terus dilatih setelah konvergensi, kerugian mulai berfluktuasi dalam 
 
 Saat melatih sebuah model, Anda sering kali akan melihat kurva kerugian untuk menentukan apakah model telah konvergen. Kurva kerugian menunjukkan bagaimana kerugian berubah seiring dengan pelatihan model. Berikut adalah gambaran umum tentang bagaimana kurva kerugian yang tipikal terlihat. Kerugian terletak pada sumbu y dan iterasi terletak pada sumbu x:
 
-![alt text](image-25.png)
+![alt text](images/image-25.png)
 
 Gambar 13. Kurva kerugian yang menunjukkan model konvergen di sekitar tanda iterasi ke-1.000.
 
@@ -432,17 +432,17 @@ Dalam gambar-gambar tersebut, kami menggunakan bobot dan bias yang diperoleh pad
 
 Pada gambar berikut, kita dapat melihat bahwa sekitar iterasi kedua, model tidak akan baik dalam membuat prediksi karena jumlah kerugian yang tinggi.
 
-![alt text](image-26.png)
+![alt text](images/image-26.png)
 
 Gambar 14. Kurva kerugian dan snapshot model pada awal proses pelatihan.
 
 Sekitar iterasi ke-400, kita dapat melihat bahwa gradient descent telah menemukan bobot dan bias yang menghasilkan model yang lebih baik.
 
-![alt text](image-27.png)
+![alt text](images/image-27.png)
 
 Gambar 15. Kurva kerugian dan snapshot model sekitar tengah proses pelatihan.
 
-![alt text](image-28.png)
+![alt text](images/image-28.png)
 
 Gambar 16. Kurva kerugian dan snapshot model menjelang akhir proses pelatihan.
 
@@ -452,19 +452,19 @@ Fungsi kerugian untuk model linier selalu menghasilkan permukaan convex. Sebagai
 
 Jika kita menggambar permukaan kerugian untuk model dengan satu fitur, kita dapat melihat bentuk convex nya. Berikut adalah permukaan kerugian dari dataset mil per galon yang digunakan dalam contoh sebelumnya. Bobot berada di sumbu x, bias berada di sumbu y, dan kerugian berada di sumbu z:
 
-![alt text](image-29.png)
+![alt text](images/image-29.png)
 
 Gambar 17. Permukaan kerugian yang menunjukkan bentuk convex nya.
 
 Dalam contoh dibawah ini, bobot sebesar -5,44 dan bias sebesar 35,94 menghasilkan kerugian terendah sebesar 5,54.
 
-![alt text](image-30.png)
+![alt text](images/image-30.png)
 
 Gambar 18. Permukaan kerugian yang menunjukkan nilai bobot dan bias yang menghasilkan kerugian terendah.
 
 Model linier konvergen ketika telah menemukan kerugian minimum. Oleh karena itu, iterasi tambahan hanya menyebabkan penurunan gradien menggerakkan nilai bobot dan bias dalam jumlah yang sangat kecil di sekitar minimum. Jika kita menggambar titik bobot dan bias selama proses penurunan gradien, titik-titik tersebut akan terlihat seperti bola yang menggelinding turun dari bukit, akhirnya berhenti di titik di mana tidak ada lagi kemiringan ke bawah.
 
-![alt text](image-31.png)
+![alt text](images/image-31.png)
 
 Gambar 19. Grafik kerugian yang menunjukkan titik-titik penurunan gradien berhenti di titik terendah pada grafik.
 
@@ -474,7 +474,7 @@ Penting untuk dicatat bahwa model hampir tidak pernah menemukan nilai minimum ya
 
 Dengan menggunakan nilai bobot dan bias yang menghasilkan kerugian terendah—dalam hal ini bobot sebesar -5,44 dan bias sebesar 35,94—kita dapat menggambar model untuk melihat seberapa baik model tersebut sesuai dengan data:
 
-![alt text](image-32.png)
+![alt text](images/image-32.png)
 
 Gambar 20. Model yang digambarkan menggunakan nilai bobot dan bias yang menghasilkan kerugian terendah.
 
@@ -501,23 +501,23 @@ Perbedaan antara parameter model lama dan parameter model baru sebanding dengan 
 
 Laju pembelajaran yang ideal membantu model untuk berkonvergensi dalam jumlah iterasi yang wajar. Dalam Gambar 21, kurva kerugian menunjukkan bahwa model mengalami perbaikan yang signifikan selama 20 iterasi pertama sebelum mulai berkonvergensi.
 
-![alt text](image-33.png)
+![alt text](images/image-33.png)
 
 Gambar 21. Grafik kerugian yang menunjukkan model yang dilatih dengan laju pembelajaran yang berkonvergensi dengan cepat.
 
 Sebaliknya, jika learning rate terlalu kecil menyebabkan terlalu banyak pengulangan percobaan untuk meraih converge, pada gambar dibawah kurva kerugian menunjukkan bahwa model membuat kemajuan yang lambat, setelah setiap iterasi.
 
-![alt text](image-34.png)
+![alt text](images/image-34.png)
 
 Gambar 22. Grafik kerugian yang menunjukkan model yang dilatih dengan laju pembelajaran yang kecil.
 
 Laju pembelajaran yang terlalu besar tidak pernah berkonvergensi karena setiap iterasi akan menyebabkan kerugian berfluktuasi atau terus meningkat. Dalam Gambar 23, kurva kerugian menunjukkan model yang mengalami penurunan dan kemudian peningkatan kerugian setelah setiap iterasi, dan dalam Gambar 24, kerugian meningkat pada iterasi-iterasi selanjutnya.
 
-![alt text](image-35.png)
+![alt text](images/image-35.png)
 
 Gambar 23. Grafik kerugian yang menunjukkan model yang dilatih dengan laju pembelajaran yang terlalu besar, di mana kurva kerugian berfluktuasi dengan liar, naik turun seiring bertambahnya iterasi.
 
-![alt text](image-36.png)
+![alt text](images/image-36.png)
 
 Gambar 24. Grafik kerugian yang menunjukkan model yang dilatih dengan laju pembelajaran yang terlalu besar, di mana kurva kerugian meningkat secara drastis pada iterasi-iterasi akhir.
 
@@ -533,7 +533,7 @@ Dua teknik umum untuk mendapatkan gradien yang tepat secara rata-rata tanpa perl
 
 Perhatikan dalam gambar berikut bagaimana kerugian sedikit berfluktuasi saat model memperbarui bobot dan biasnya menggunakan SGD, yang dapat menyebabkan (noise) kebisingan dalam grafik kerugian:
 
-![alt text](image-37.png)
+![alt text](images/image-37.png)
 
 Gambar 25. Model yang dilatih dengan penurunan gradien stokastik (SGD) menunjukkan kebisingan dalam kurva kerugian.
 
@@ -543,7 +543,7 @@ Gambar 25. Model yang dilatih dengan penurunan gradien stokastik (SGD) menunjukk
 
 Menentukan jumlah contoh untuk setiap batch tergantung pada dataset dan sumber daya komputasi yang tersedia. Secara umum, ukuran batch kecil berperilaku seperti SGD, sedangkan ukuran batch yang lebih besar berperilaku seperti penurunan gradien full-batch.
 
-![alt text](image-38.png)
+![alt text](images/image-38.png)
 
 Gambar 26. Model dilatih dengan mini-batch SGD.
 
@@ -557,7 +557,7 @@ Pelatihan biasanya memerlukan banyak epoch. Artinya, sistem perlu memproses seti
 
 Jumlah epoch adalah **hiperparameter** yang Anda atur sebelum model mulai dilatih. Dalam banyak kasus, Anda perlu bereksperimen dengan berapa banyak epoch yang diperlukan agar model dapat konvergen. Secara umum, lebih banyak epoch menghasilkan model yang lebih baik, tetapi juga memerlukan lebih banyak waktu untuk pelatihan.
 
-![alt text](image-39.png)
+![alt text](images/image-39.png)
 
 Gambar 27. Full batch versus mini batch.
 
@@ -587,5 +587,8 @@ Dalam latihan pemrograman berikut, Anda akan membangun model linear regression A
 
 ### Colabs
 
-Machine Learning Crash Course menggunakan Colaboratories (Colabs) untuk programming exercises. Colab adalah Google's implementation dari Jupyter Notebook.
+Machine Learning Crash Course menggunakan Colaboratories (Colabs) untuk programming exercises. Colab adalah Google's implementation dari Jupyter Notebook. [Google Colab](https://colab.research.google.com/)
+
+
+
 
