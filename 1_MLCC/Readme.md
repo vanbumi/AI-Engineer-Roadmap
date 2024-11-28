@@ -589,6 +589,150 @@ Dalam latihan pemrograman berikut, Anda akan membangun model linear regression A
 
 Machine Learning Crash Course menggunakan Colaboratories (Colabs) untuk programming exercises. Colab adalah Google's implementation dari Jupyter Notebook. [Google Colab](https://colab.research.google.com/)
 
+## Linear Regression: Test Your Knowledge
+
+1. Which of these is an example of a parameter that is calculated during training for a linear regression model?
+
+- Weight
+- Learning rate
+- Prediction
+- Label
+
+The correct answer is Weight.
+
+In a linear regression model, weights (or coefficients) are parameters that are learned during the training process. The learning rate is a hyperparameter that controls how much to adjust the weights during training, while prediction and label are not parameters calculated during training. The prediction is the output of the model based on the input features and the learned weights, and the label is the actual value we are trying to predict.
+
+2. Fill-in-the-blanks
+Enter one or more words to complete the sentence.
+
+Suppose you are building a linear regression model to predict the sale price of a used car. The training dataset includes the following information: sale price (label), model year (feature), MSRP (feature), odometer mileage (feature), gas mileage (feature). How many weights will there be for this model? 
+
+In a linear regression model, each feature corresponds to a weight. Additionally, there is typically one bias term (intercept) included in the model.
+
+In your example, the features are:
+
+1. Model year
+2. MSRP
+3. Odometer mileage
+4. Gas mileage
+
+That gives us 4 features. Including the bias term, the total number of weights will be:
+
+4 (weights for features) + 1 (bias) = 5 weights.
+So, there will be 5 weights for this model.
+
+3. Which of these controls the size of the steps of the gradient descent algorithm?
+
+- Learning rate
+- Loss function
+- Batch size
+- Regularization rate
+
+The size of the steps of the gradient descent algorithm is controlled by the learning rate. The learning rate determines how much to change the model parameters in response to the estimated error each time the model weights are updated.
+
+So the correct answer is:
+Learning rate
+
+4. Suppose you are training a linear regression model and after about 100 iterations you notice that the loss is high and trending downward, but not by a significant amount. What is likely to be the problem?
+
+- The learning rate is too large.
+- The learning rate is too small.
+- Your dataset has too many examples.
+- Your dataset does not have enough examples.
+
+The problem in this scenario is likely to be:
+
+The learning rate is too large.
+When the learning rate is too large, the model might overshoot the optimal solution, causing the loss to fluctuate or decrease very slowly. The model might eventually converge, but it would take more iterations than necessary, and there is a risk of divergence.
+
+If the learning rate is too small, the model would converge more slowly, but the loss would decrease more consistently. However, with a large learning rate, the model is not converging properly despite the loss being high and decreasing.
+
+If the dataset has too many examples, the model might take longer to converge, but the learning rate is not the primary factor affecting convergence in this case. If the dataset does not have enough examples, the model might not learn the underlying patterns well, but this issue would not cause the loss to fluctuate or decrease slowly.
 
 
+
+## THE ANSWER FOR COPILOT: 
+
+Question 1.
+
+The parameter that is calculated during training for a linear regression model is the **Weight**. During the training process, the model learns the optimal values for the weights (coefficients) that minimize the error between the predicted and actual values.
+
+- **Learning rate** is a hyperparameter that you set before training.
+- **Prediction** is the output of the model after it has been trained.
+- **Label** is the actual target value in the dataset.
+
+Question 2.
+
+In a linear regression model, each feature gets its own weight. Given the training dataset includes the following features:
+
+- Model year
+- MSRP (Manufacturer's Suggested Retail Price)
+- Odometer mileage
+- Gas mileage
+
+Since you have four features, there will be **four weights** in the model to correspond to each of these features. Additionally, there will also be an intercept term (often called the bias term). Therefore, the total number of weights (including the intercept) will be **five**.
+
+
+Question 3.
+
+To find the mean squared error (MSE) for the given linear regression model shown in the graph, you'll need to compare the actual values (red data points) with the predicted values (blue line). Here's a step-by-step process to calculate the MSE:
+
+1. **Identify the actual values (y) and the predicted values (\(\hat{y}\)) from the graph.**
+2. **Use the formula for MSE:**
+
+\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\]
+
+   Where:
+   - \( y_i \) are the actual values.
+   - \( \hat{y}_i \) are the predicted values from the linear regression line.
+   - \( n \) is the number of data points.
+
+3. **Calculate the differences between the actual and predicted values, square those differences, and average them.**
+
+From the graph, the actual values and their corresponding predicted values on the blue line might be approximately:
+
+1. Actual: (0, 2), Predicted: (0, 2)
+2. Actual: (1, 2.5), Predicted: (1, 2.5)
+3. Actual: (2, 3), Predicted: (2, 3)
+4. Actual: (3, 3.5), Predicted: (3, 3.5)
+5. Actual: (4, 6), Predicted: (4, 4)
+6. Actual: (5, 4.5), Predicted: (5, 4.5)
+7. Actual: (6, 5), Predicted: (6, 5)
+8. Actual: (7, 5.5), Predicted: (7, 5.5)
+9. Actual: (8, 4), Predicted: (8, 6)
+10. Actual: (10, 7), Predicted: (10, 7)
+
+Using these values, let's calculate the MSE:
+
+\[
+\text{MSE} = \frac{1}{10} \left[ (2-2)^2 + (2.5-2.5)^2 + (3-3)^2 + (3.5-3.5)^2 + (6-4)^2 + (4.5-4.5)^2 + (5-5)^2 + (5.5-5.5)^2 + (4-6)^2 + (7-7)^2 \right]
+\]
+
+\[
+\text{MSE} = \frac{1}{10} \left[ 0 + 0 + 0 + 0 + 4 + 0 + 0 + 0 + 4 + 0 \right]
+\]
+
+\[
+\text{MSE} = \frac{1}{10} \times 8
+\]
+
+\[
+\text{MSE} = 0.8
+\]
+
+So, the mean squared error (MSE) for this linear regression model is 0.8.
+
+Question 4.
+
+The **Learning rate** controls the size of the steps taken by the gradient descent algorithm. It determines how quickly or slowly the algorithm converges towards the minimum of the loss function. A higher learning rate means larger steps, which can speed up the convergence but also risk overshooting the minimum. Conversely, a lower learning rate means smaller steps, which can provide more precise convergence but may take longer to reach the minimum.
+
+Question 5.
+
+The likely problem is that **the learning rate is too small**. 
+
+When the learning rate is too small, the gradient descent algorithm takes tiny steps towards the minimum of the loss function, causing the model to converge very slowly. This can result in a high loss that decreases gradually without significant improvement over iterations. Increasing the learning rate slightly might help the model converge more quickly. However, be careful not to increase it too much, as a large learning rate can cause the model to overshoot the minimum and potentially diverge.
+
+> Kesimpulan: Jawaban salah pada pertanyaan no 2.
 
